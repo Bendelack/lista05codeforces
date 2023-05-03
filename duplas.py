@@ -1,38 +1,35 @@
-a, b, c, d = map(int,input().split())
-ab = a + b
-ac = a + c
-ad = a + d
-bc = b + c
-bd = b + d
-cd = c + d
+a = int(input())
+b = int(input())
+c = int(input())
+d = int(input())
 
 diferenca = 10**4
 
-if ab > cd:
-    if ((ab)-(cd)) < diferenca:
-        diferenca = (ab)-(cd)
+if (a + b) > (c + d):
+    if (((a + b))-((c + d))) < diferenca:
+        diferenca = ((a + b))-((c + d))
 
-if ab < cd:
-    if ((cd)-(ab)) < diferenca:
-        diferenca = (cd)-(ab)
+if (a + b) < (c + d):
+    if (((c + d))-((a + b))) < diferenca:
+        diferenca = ((c + d))-((a + b))
 
-if ac > bd:
-    if ((ac)-(bd)) < diferenca:
-        diferenca = (ac)-(bd)
+if (a + c) > (b + d):
+    if (((a + c))-((b + d))) < diferenca:
+        diferenca = ((a + c))-((b + d))
 
-if ac < bd:
-    if ((bd)-(ac)) < diferenca:
-        diferenca = (bd)-(ac)
+if (a + c) < (b + d):
+    if (((b + d))-((a + c))) < diferenca:
+        diferenca = ((b + d))-((a + c))
 
-if ad > bc:
-    if ((ad)-(bc)) < diferenca:
-        diferenca = (ad)-(bc)
+if (a + d) > (b + c):
+    if (((a + d))-((b + c))) < diferenca:
+        diferenca = ((a + d))-((b + c))
 
-if ad < bc:
-    if ((bc)-(ad)) < diferenca:
-        diferenca = (bc)-(ad)
+if (a + d) < (b + c):
+    if (((b + c))-((a + d))) < diferenca:
+        diferenca = ((b + c))-((a + d))
 
-if ab == cd or ac == bd or ad == bc:
+if (a + b) == (c + d) or (a + c) == (b + d) or (a + d) == (b + c):
     print(0)
 else:
     print(diferenca)
